@@ -42,6 +42,21 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "fuel05_ugc_video_WqEhYg": {
+          "type": "fuel05_ugc_video",
+          "settings": {
+            "position": 2,
+            "device": "desktop",
+            "video": "shopify://files/videos/05_ROAS1.59_11.08_Arbitrage_HighOilConcentration_V2_9x16.mp4",
+            "video_url": "",
+            "product": "5x-100ml-parfumflaschen"
+          }
+        }
+      },
+      "block_order": [
+        "fuel05_ugc_video_WqEhYg"
+      ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
