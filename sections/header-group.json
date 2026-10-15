@@ -1,1 +1,169 @@
-{"name":"t:sections.header.name","type":"header","sections":{"offer_annoucement_4tnBfB":{"type":"offer-annoucement","disabled":true,"name":"Offer Announcement","settings":{"background_color":"#000000","background_color_2":"#e32402","prepend_text":"St. Patrick's Day-Aktion","link_text":"3 kaufen – 1 gratis","append_text":"","link":"shopify:\/\/collections\/best-sellers"}},"offer_timebar_8kAUGX":{"type":"offer-timebar","blocks":{"payment_icon_NXYPjm":{"type":"payment_icon","settings":{"icon":"shopify:\/\/shop_images\/090e7fd71af4b4e7589642874d6cae93a0a34f77.png","label":"Schnell"}},"payment_icon_KF79X3":{"type":"payment_icon","settings":{"icon":"shopify:\/\/shop_images\/Flag_of_Germany_svg.webp","label":"Qualität"}},"payment_icon_3nUT9e":{"type":"payment_icon","settings":{"icon":"shopify:\/\/shop_images\/800c98d03dc73f77225bfa90300384e0370c7cff.png","label":"Sicher"}},"payment_icon_Qjr7YN":{"type":"payment_icon","settings":{"icon":"shopify:\/\/shop_images\/777929254296c2d290f0836dc4e68451f4cfdbc4.png","label":"Flexibel"}},"payment_icon_rTMrrJ":{"type":"payment_icon","settings":{"icon":"shopify:\/\/shop_images\/images-555x360--08-28-2026_03_03_PM.png","label":"Direkt"}}},"block_order":["payment_icon_NXYPjm","payment_icon_KF79X3","payment_icon_3nUT9e","payment_icon_Qjr7YN","payment_icon_rTMrrJ"],"name":"Offer Timebar","settings":{"enable_top_bar":true,"enable_timer":true,"enable_badges":false,"primary_color":"#f2f2f2","secondary_color":"#000000","top_banner_text":"","prepend_text":"3 kaufen, 1 gratis dazu!","countdown_date":"","append_text":"Jetzt einkaufen","link":""}},"blocky_lys_scrolling_text_bar_GLkKNr":{"type":"blocky-lys-scrolling-text-bar","blocks":{"text_iDAedj":{"type":"text","disabled":true,"settings":{"text":"3 KAUFEN- 1  GRATIS"}},"text_QD7JEH":{"type":"text","settings":{"text":"Kostenloser Versand ab  €40!"}},"text_39tt9p":{"type":"text","disabled":true,"settings":{"text":"KOSTENLOSER VERSAND AB 55€"}},"text_DiPtyi":{"type":"text","disabled":true,"settings":{"text":"60 TAGE GELD-ZURÜCK-GARANTIE"}},"text_7Mhc9j":{"type":"text","disabled":true,"settings":{"text":"BIS ZU 95% GÜNSTIGER"}}},"block_order":["text_iDAedj","text_QD7JEH","text_39tt9p","text_DiPtyi","text_7Mhc9j"],"disabled":true,"settings":{"text_size":"1.5","background_color":"#000000","text_color":"#ffffff","speed":1,"text_spacing":3,"padding_top":16,"padding_bottom":16}},"header":{"type":"header","settings":{"logo_position":"middle-left","menu":"main-menu","menu_type_desktop":"dropdown","sticky_header_type":"on-scroll-up","show_line_separator":true,"color_scheme":"scheme-1","menu_color_scheme":"scheme-2","enable_country_selector":false,"enable_language_selector":false,"enable_customer_avatar":true,"mobile_logo_position":"center","margin_bottom":0,"padding_top":20,"padding_bottom":20}}},"order":["offer_annoucement_4tnBfB","offer_timebar_8kAUGX","blocky_lys_scrolling_text_bar_GLkKNr","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "offer_annoucement_4tnBfB": {
+      "type": "offer-annoucement",
+      "disabled": true,
+      "name": "Offer Announcement",
+      "settings": {
+        "background_color": "#000000",
+        "background_color_2": "#e32402",
+        "prepend_text": "St. Patrick's Day-Aktion",
+        "link_text": "3 kaufen – 1 gratis",
+        "append_text": "",
+        "link": "shopify://collections/best-sellers"
+      }
+    },
+    "offer_timebar_8kAUGX": {
+      "type": "offer-timebar",
+      "blocks": {
+        "payment_icon_NXYPjm": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/090e7fd71af4b4e7589642874d6cae93a0a34f77.png",
+            "label": "Schnell"
+          }
+        },
+        "payment_icon_KF79X3": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/Flag_of_Germany_svg.webp",
+            "label": "Qualität"
+          }
+        },
+        "payment_icon_3nUT9e": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/800c98d03dc73f77225bfa90300384e0370c7cff.png",
+            "label": "Sicher"
+          }
+        },
+        "payment_icon_Qjr7YN": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/777929254296c2d290f0836dc4e68451f4cfdbc4.png",
+            "label": "Flexibel"
+          }
+        },
+        "payment_icon_rTMrrJ": {
+          "type": "payment_icon",
+          "settings": {
+            "icon": "shopify://shop_images/images-555x360--08-28-2026_03_03_PM.png",
+            "label": "Direkt"
+          }
+        }
+      },
+      "block_order": [
+        "payment_icon_NXYPjm",
+        "payment_icon_KF79X3",
+        "payment_icon_3nUT9e",
+        "payment_icon_Qjr7YN",
+        "payment_icon_rTMrrJ"
+      ],
+      "name": "Offer Timebar",
+      "settings": {
+        "enable_top_bar": true,
+        "enable_timer": true,
+        "enable_badges": false,
+        "primary_color": "#f2f2f2",
+        "secondary_color": "#000000",
+        "top_banner_text": "",
+        "prepend_text": "Büro-Comeback-Aktion",
+        "countdown_date": "",
+        "append_text": "3 für 2 – 5 für 3!",
+        "link": ""
+      }
+    },
+    "blocky_lys_scrolling_text_bar_GLkKNr": {
+      "type": "blocky-lys-scrolling-text-bar",
+      "blocks": {
+        "text_iDAedj": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "3 KAUFEN- 1  GRATIS"
+          }
+        },
+        "text_QD7JEH": {
+          "type": "text",
+          "settings": {
+            "text": "Kostenloser Versand ab  €40!"
+          }
+        },
+        "text_39tt9p": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "KOSTENLOSER VERSAND AB 55€"
+          }
+        },
+        "text_DiPtyi": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "60 TAGE GELD-ZURÜCK-GARANTIE"
+          }
+        },
+        "text_7Mhc9j": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "BIS ZU 95% GÜNSTIGER"
+          }
+        }
+      },
+      "block_order": [
+        "text_iDAedj",
+        "text_QD7JEH",
+        "text_39tt9p",
+        "text_DiPtyi",
+        "text_7Mhc9j"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_size": "1.5",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "speed": 1,
+        "text_spacing": 3,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-2",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "offer_annoucement_4tnBfB",
+    "offer_timebar_8kAUGX",
+    "blocky_lys_scrolling_text_bar_GLkKNr",
+    "header"
+  ]
+}
