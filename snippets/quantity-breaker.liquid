@@ -34,6 +34,9 @@
   }
 </style>
 
+{% unless product.available %}
+  {% render 'sold-out-alternative', product: product %}
+{% else %}
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <div
@@ -619,6 +622,7 @@
     });
   });
 </script>
+{% endunless %}
 
 <div>
   <img
