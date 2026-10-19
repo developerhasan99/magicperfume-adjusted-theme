@@ -624,6 +624,9 @@
 </script>
 {% endunless %}
 
+{%- comment -%} FUEL_06 product page entry, see snippets/fuel06-pdp-link.liquid. Adapted: the perfume template (product.qunatity-breaks) draws its buy form here, not in reactive-variant-selector.liquid as in the source; same spot, after the form and before the payment badge. {%- endcomment -%}
+{%- render 'fuel06-pdp-link' -%}
+
 <div>
   <img
     class="max-w-[400px] mx-auto mt-8 block [filter:grayscale(1)]"

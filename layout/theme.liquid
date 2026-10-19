@@ -434,5 +434,15 @@ body {
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1" rel="stylesheet" />
+
+    {%- comment -%}
+      FUEL_06 finder dialog on product pages, opened by the link under the buy
+      button (snippets/fuel06-pdp-link.liquid, rendered from snippets/reactive-atc.liquid
+      in this theme). Same block as the source theme, placed just before </body>.
+    {%- endcomment -%}
+    {%- if request.page_type == 'product' and settings.fuel06_pdp_enabled -%}
+      {%- render 'fuel06-finder', mode: 'assets' -%}
+      {%- render 'fuel06-finder', mode: 'dialog' -%}
+    {%- endif -%}
   </body>
 </html>
