@@ -2,7 +2,7 @@
   <span>{{ product.metafields.custom.bundle_product_content }}</span>
 </div>
 
-{% if product.metafields.custom.choose_your_fragrances_options != blank %}
+{% if product.metafields.custom.bundle_size != blank %}
   <div
     id="price-{{ section.id }}"
     class="bundle-price-pdp"
@@ -31,13 +31,13 @@
       {% endif %}
     </div>
     <div class="text-lg font-semibold text-black leading-normal">
-      Das entspricht nur {{ product.price | divided_by: product.metafields.custom.choose_your_fragrances_options | money }} pro Flasche.
+      Das entspricht nur {{ product.price | divided_by: product.metafields.custom.bundle_size | money }} pro Flasche.
     </div>
   </div>
 {% endif %}
 
 {% assign bundle_collection_handles = 'best-sellers,new' | split: ',' %}
-{% assign product_count = product.metafields.custom.choose_your_fragrances_options %}
+{% assign product_count = product.metafields.custom.bundle_size %}
 {% assign dropdown_ml = product.metafields.custom.select_bundle_dropdown_ml | default: "50" %}
 {% assign bundle_ml = dropdown_ml | append: "ml" %}
 {% assign bundle_size_token = dropdown_ml | append: '' | downcase | strip | replace: ' ', '' | remove: 'ml' | append: 'ml' %}
@@ -257,18 +257,22 @@
           || (product.inspiration_name || '').toLowerCase().includes(search));
       },
       addRemoveProduct(product) {
-        if (this.selectedProducts.length < {{ product_count }} && !this.isProductSelected(product.id)) {
-          product.variant = product.variants[this.selectedVariant]
-          this.selectedProducts.push(product);
+        if (this.selectedProducts.length >= {{ product_count }}) return;
+        product.variant = product.variants[this.selectedVariant];
+        this.selectedProducts.push(product);
 
-          if (this.selectedProducts.length === {{ product_count }}) {
-            this.showModal = false;
-            // Do auto ATC and redirect to checkout
-            this.doATCandCheckout();
-          }
-        } else {
-          this.removeProduct(this.selectedProducts.findIndex(item => item.id === product.id));
+        if (this.selectedProducts.length === {{ product_count }}) {
+          this.showModal = false;
+          // Do auto ATC and redirect to checkout
+          this.doATCandCheckout();
         }
+      },
+      removeOne(productId) {
+        const index = this.selectedProducts.map(item => item.id).lastIndexOf(productId);
+        if (index > -1) this.removeProduct(index);
+      },
+      countOf(productId) {
+        return this.selectedProducts.filter(item => item.id === productId).length;
       },
       removeProduct(index) {
         this.selectedProducts.splice(index, 1);

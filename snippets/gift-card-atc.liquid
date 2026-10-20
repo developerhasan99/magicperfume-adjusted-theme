@@ -63,7 +63,7 @@
       value="1"
       class="atc-button shimmer-btn cta_product_from_submit_btn flex flex-wrap items-center !mb-0 text-2xl !pb-3 !pt-3 rounded-lg button hover:bg-[#17803d] bg-[#146b32] transition-colors shadow-xl tracking-normal button--full-width button--primary"
       aria-label="Add to cart"
-      {% if product.metafields.custom.choose_your_fragrances_options != blank %}
+      {% if product.metafields.custom.bundle_size != blank %}
       disabled="disabled"
       {% endif %}>
       <span>In den Warenkorb</span>
