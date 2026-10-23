@@ -295,6 +295,11 @@
         "type": "shopify://apps/convert-experiences/blocks/convert-tracking/2eacdd19-b384-4180-b32c-b323a6d9e27e",
         "disabled": false,
         "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
