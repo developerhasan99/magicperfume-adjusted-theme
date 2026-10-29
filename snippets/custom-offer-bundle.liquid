@@ -170,6 +170,7 @@
       cartError: '',
       skipAtcButton: {{ block.settings.skip_atc_button | json }},
       openCheckout: {{ block.settings.open_checkout | json }},
+      fixedCount: {% if product.tags contains 'fixed_bundle' %}{{ fixed_bundle_products.size | default: 0 }}{% else %}0{% endif %},
       selectedProducts: [
         {% if product.tags contains 'fixed_bundle' %}
           {% for fixed_var in fixed_bundle_products %}
@@ -335,6 +336,10 @@
           return data;
         })
         .then(data => {
+          // Reset the bundle, keeping any fixed products
+          this.selectedProducts.splice(this.fixedCount);
+          this.searchText = '';
+          this.activeCategory = 'All';
           if (this.openCheckout) {
             window.location.href = '/checkout';
           } else if (cart) {
