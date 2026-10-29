@@ -168,6 +168,8 @@
       searchText: "",
       addingToCart: false,
       cartError: '',
+      skipAtcButton: {{ block.settings.skip_atc_button | json }},
+      openCheckout: {{ block.settings.open_checkout | json }},
       selectedProducts: [
         {% if product.tags contains 'fixed_bundle' %}
           {% for fixed_var in fixed_bundle_products %}
@@ -263,8 +265,8 @@
 
         if (this.selectedProducts.length === {{ product_count }}) {
           this.showModal = false;
-          // Do auto ATC and redirect to checkout
-          this.doATCandCheckout();
+          // Auto ATC unless the shopper should click the button
+          if (this.skipAtcButton) this.doATCandCheckout();
         }
       },
       removeOne(productId) {
@@ -309,6 +311,11 @@
             properties: properties
           }]
         };
+        const cart = document.querySelector('cart-drawer');
+        if (cart) {
+          items.sections = cart.getSectionsToRender().map(s => s.id);
+          items.sections_url = window.location.pathname;
+        }
 
         // Make the API call
         fetch('/cart/add.js', {
@@ -327,9 +334,15 @@
           }
           return data;
         })
-        .then(() => {
-          // Redirect to cart after successful addition
-          window.location.href = '/checkout';
+        .then(data => {
+          if (this.openCheckout) {
+            window.location.href = '/checkout';
+          } else if (cart) {
+            cart.classList.remove('is-empty');
+            cart.renderContents(data);
+          } else {
+            window.location.href = '/cart';
+          }
         })
         .catch(error => {
           console.error('Error adding to cart:', error, error.response || '');

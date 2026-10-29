@@ -273,6 +273,8 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
+              {%- when 'atc_bundle_builder' -%}
+                {% render 'custom-offer-bundle', block: block %}
               {%- when 'videos' -%}
                 <div class="grid grid-cols-3 gap-3 pt-6 cta_videos">
                   {% for i in (1..3) %}
@@ -1558,6 +1560,27 @@
           "id": "custom_liquid",
           "label": "t:sections.custom-liquid.settings.custom_liquid.label",
           "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+        }
+      ]
+    },
+    {
+      "type": "atc_bundle_builder",
+      "name": "Bundle builder",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "skip_atc_button",
+          "label": "Skip add to cart button",
+          "default": true,
+          "info": "Add the bundle to cart as soon as all products are selected. When off, the modal just closes and the shopper clicks the button."
+        },
+        {
+          "type": "checkbox",
+          "id": "open_checkout",
+          "label": "Go to checkout after adding",
+          "default": false,
+          "info": "When off, the cart drawer opens instead."
         }
       ]
     },
